@@ -1,0 +1,53 @@
+.footer {
+  /* background: linear-gradient(rgba(30, 0, 0, 0.5), rgba(147, 34, 0, 0.5), rgba(234, 234, 234, 0.5)); */
+  height: 350px;
+  width: 100%;
+  margin: 0;
+  background-color: red;
+}
+
+.footer-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  width: 40%;
+  height: 200px;
+  margin: auto;
+}
+
+.footer button {
+  background-color: rgb(255, 255, 255, 0);
+  border: none;
+}
+
+.fa-linkedin {
+  color: #0072b1;
+ }
+
+ .fa-github {
+  color: #171515;
+ }
+
+ .fa-twitter {
+  color: #1da1f2;
+ }
+
+ .fa-facebook {
+  color: #3b5998;
+ }
+
+ .fa-youtube {
+  color: #c4302b;
+ }
+
+ .fa-brands:hover {
+  height: 53px;
+ }
+
+ .copyright {
+  display: flex;
+  justify-content: center;
+  color: grey;
+  height: 50px;
+  margin: 60px auto 0;
+ }

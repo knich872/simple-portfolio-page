@@ -1,0 +1,36 @@
+.card {
+  box-shadow: 3px 3px 30px grey;
+  font-weight: bold;
+  height: 600px;
+  border-bottom: solid 5px darkblue;
+  border-radius: 5px;
+  /* color: red;
+  font-size: 4rem; */
+}
+
+.card-title {
+  font-size: 2rem;
+  text-shadow: 1px 1px 3px lightgrey;
+  color: white;
+}
+
+.card-main {
+  display: block !important;
+  height: 100%;
+  width: 100%;
+}
+
+.card-img-overlay {
+  height: 100%;
+  width: auto;
+
+  a {
+    margin-top: 20%;
+  }
+}
+
+.img-fluid {
+  height: 100% !important;
+  opacity: 70%;
+  background-color: black;
+}
