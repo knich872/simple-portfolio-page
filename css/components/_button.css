@@ -15,3 +15,11 @@ button:hover {
   background-color: rgba(77, 141, 245, 0.7);
   color: white;
 }
+
+.btn {
+  margin-top: 20%;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  box-shadow: 2px 2px 10px #ddd;
+}
