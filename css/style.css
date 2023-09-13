@@ -4,16 +4,11 @@
 /* Fontawesome */
 @import url('https://use.fontawesome.com/releases/v6.1.2/css/all.css');
 
-@import "components/_banner.css";
-@import "components/_card.css";
-@import "components/_text.css";
-@import "components/_footer.css";
-@import "components/_button.css";
-@import "components/_images.css";
+@import 'components/index';
 
 /* Utilities */
 body {
-  background: linear-gradient(to bottom, #2a7f8a, white, white, white);
+  background: linear-gradient(to bottom, #9ecbd1, white, white, white, white);
   margin: 0;
   font-family: Open Sans;
 }
@@ -27,3 +22,7 @@ a {
 }
 
 /* Custom design below! */
+
+.profile-pic {
+  width: 80%;
+}
