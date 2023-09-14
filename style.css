@@ -38,10 +38,11 @@ a {
   color: white;
   font-size: 1.5rem;
   font-weight: bold;
-  text-shadow: 1px 1px 8px #333;
+  text-shadow: 0 0 8px #111;
   text-align: center;
-  margin: auto;
-  padding-top: 10%;
+  /* margin: auto; */
+  padding: 5% 0 0 1%;
+  width: 60%
 }
 
 .card-text {
@@ -58,21 +59,35 @@ a {
 }
 
 .card-img-overlay {
-  height: 50%;
-  width: 60%;
-  margin: 50% auto 0 auto;
+  margin: 150px auto 0 auto;
   background-color: white;
+  width: 80%;
+  height: 45%;
+  box-shadow: 1px 1px 8px lightgrey;
 
   a {
     margin: auto;
-    /* margin-top: 20%; */
   }
+}
+
+.project-description {
+  color: rgb(69, 69, 69);
+  text-shadow: 0 0 5px #a2a2a2;
+  text-decoration: none;
+  text-align: center;
 }
 
 .img-fluid {
   height: 100% !important;
   opacity: 70%;
   background-color: black;
+}
+
+.tech-stack {
+  width: 40%;
+  height: 8%;
+  margin-top: 8%;
+  padding: 0 1% 0 0;
 }
 
 #about{
