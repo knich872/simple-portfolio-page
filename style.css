@@ -1,5 +1,5 @@
 /* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@700');
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@700'); */
 
 /* Fontawesome */
 @import url('https://use.fontawesome.com/releases/v6.1.2/css/all.css');
@@ -10,11 +10,10 @@
 body {
   background: linear-gradient(to bottom, #9ecbd1, white, white, white, white);
   margin: 0;
-  font-family: Open Sans;
+  font-family: Poppins;
 }
 
 h1, h2, h3, h4 {
-  font-family: Poppins;
 }
 
 a {
@@ -86,6 +85,8 @@ a {
 }
 
 #projects {
+  margin-top: 10%;
+
   .img-fluid {
     object-fit: cover;
     opacity: 100%;
@@ -95,17 +96,17 @@ a {
 }
 
 .footer {
-  height: 350px;
+  height: 100px;
   width: 100%;
   margin: 0;
 }
 
-.footer-container {
+.contact-container {
   display: flex;
   align-items: flex-end;
   justify-content: space-evenly;
   width: 40%;
-  height: 200px;
+  height: 100px;
   margin: auto;
 }
 
