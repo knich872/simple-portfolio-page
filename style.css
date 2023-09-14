@@ -30,7 +30,6 @@ a {
 .card {
   height: 30vh;
   width: 25vw;
-  background-color: #2a7f8a;
   border-bottom: solid 8px #2a7f8a;
   box-shadow: 3px 3px 30px grey;
   font-weight: bold;
@@ -38,14 +37,17 @@ a {
 
 .card-title {
   color: white;
-  font-size: 3rem;
-  font-size: bold;
+  font-size: 1.5rem;
+  font-weight: bold;
   text-shadow: 1px 1px 8px #333;
+  text-align: center;
+  margin: auto;
+  padding-top: 10%;
 }
 
 .card-text {
   color: white;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-size: bold;
   text-shadow: 1px 1px 5px #333;
 }
@@ -57,11 +59,14 @@ a {
 }
 
 .card-img-overlay {
-  height: 100%;
-  width: auto;
+  height: 50%;
+  width: 60%;
+  margin: 50% auto 0 auto;
+  background-color: white;
 
   a {
-    margin-top: 20%;
+    margin: auto;
+    /* margin-top: 20%; */
   }
 }
 
@@ -80,10 +85,12 @@ a {
   }
 }
 
-#project {
-  img {
-    height: 100%;
-    opacity: 80%;
+#projects {
+  .img-fluid {
+    object-fit: cover;
+    opacity: 100%;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
   }
 }
 
@@ -147,28 +154,25 @@ a {
   }
 }
 
-button {
-  height: 50px;
-  width: 150px;
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
-  color: rgb(245, 244, 244);
-  border-radius: 20px;
-  border: solid 0.5px rgba(77, 141, 245, 0.9);
-  background-color: rgba(77, 141, 245, 0.5);
-}
+@media (max-width: 400px) {
+  .profile-pic {
+    width: 90%;
+    margin-top: 15%;
+  }
 
-button:hover {
-  font-size: 1.6rem;
-  background-color: rgba(77, 141, 245, 0.7);
-  color: white;
-}
+  .card-title {
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 8px #333;
+    text-align: center;
+    margin: auto;
+    padding-top: 10%;
+  }
 
-.btn {
-  margin-top: 20%;
-  background-color: white;
-  color: black;
-  font-weight: bold;
-  box-shadow: 2px 2px 10px #ddd;
+  .footer-container {
+    a {
+      padding: 0 10px;
+    }
+  }
 }
