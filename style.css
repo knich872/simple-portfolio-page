@@ -1,0 +1,174 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@700');
+
+/* Fontawesome */
+@import url('https://use.fontawesome.com/releases/v6.1.2/css/all.css');
+
+@import 'css/components/index';
+
+/* Utilities */
+body {
+  background: linear-gradient(to bottom, #9ecbd1, white, white, white, white);
+  margin: 0;
+  font-family: Open Sans;
+}
+
+h1, h2, h3, h4 {
+  font-family: Poppins;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Custom design below! */
+
+.profile-pic {
+  width: 80%;
+}
+
+.card {
+  height: 30vh;
+  width: 25vw;
+  background-color: #2a7f8a;
+  border-bottom: solid 8px #2a7f8a;
+  box-shadow: 3px 3px 30px grey;
+  font-weight: bold;
+}
+
+.card-title {
+  color: white;
+  font-size: 3rem;
+  font-size: bold;
+  text-shadow: 1px 1px 8px #333;
+}
+
+.card-text {
+  color: white;
+  font-size: 1.5rem;
+  font-size: bold;
+  text-shadow: 1px 1px 5px #333;
+}
+
+.card-main {
+  display: block !important;
+  height: 100%;
+  width: 100%;
+}
+
+.card-img-overlay {
+  height: 100%;
+  width: auto;
+
+  a {
+    margin-top: 20%;
+  }
+}
+
+.img-fluid {
+  height: 100% !important;
+  opacity: 70%;
+  background-color: black;
+}
+
+#about{
+  h1 {
+    font-size: 4rem;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+}
+
+#project {
+  img {
+    height: 100%;
+    opacity: 80%;
+  }
+}
+
+.footer {
+  height: 350px;
+  width: 100%;
+  margin: 0;
+}
+
+.footer-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  width: 40%;
+  height: 200px;
+  margin: auto;
+}
+
+.footer button {
+  background-color: rgb(255, 255, 255, 0);
+  border: none;
+}
+
+.fa-linkedin {
+  color: #0072b1;
+}
+
+.fa-github {
+  color: #171515;
+}
+
+.fa-twitter {
+  color: #1da1f2;
+}
+
+.fa-facebook {
+  color: #3b5998;
+}
+
+.fa-brands:hover {
+  height: 53px;
+}
+
+.copyright {
+  display: flex;
+  justify-content: center;
+  color: grey;
+  height: 50px;
+  margin: 60px auto 0;
+}
+
+.email-contact {
+  a {
+    text-decoration: none;
+    font-size: 1rem;
+  }
+
+  p {
+    border-bottom: solid 3px #2a7f8a;
+    color: #333;
+  }
+}
+
+button {
+  height: 50px;
+  width: 150px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+  color: rgb(245, 244, 244);
+  border-radius: 20px;
+  border: solid 0.5px rgba(77, 141, 245, 0.9);
+  background-color: rgba(77, 141, 245, 0.5);
+}
+
+button:hover {
+  font-size: 1.6rem;
+  background-color: rgba(77, 141, 245, 0.7);
+  color: white;
+}
+
+.btn {
+  margin-top: 20%;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  box-shadow: 2px 2px 10px #ddd;
+}
