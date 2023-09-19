@@ -224,6 +224,18 @@ a {
     width: 70vw;
     height: 40vh;
   }
+
+  .tech-stack {
+    padding: 2% 2% 0 0;
+  }
+
+  .card-title {
+    font-size: 1.8rem;
+  }
+
+  .project-description {
+    font-size: 1.4rem;
+  }
 }
 
 @media (max-width: 500px) {
@@ -235,15 +247,18 @@ a {
     height: 35vh;
   }
 
-  .card-title {
-    color: white;
-    font-size: 1rem;
-    font-weight: bold;
-    text-shadow: 1px 1px 8px #333;
-    text-align: center;
-    margin: auto;
-    padding-top: 10%;
+  .tech-stack {
+    padding: 4% 2% 0 0;
   }
+
+  .card-title {
+    font-size: 1.3rem;
+  }
+
+  .project-description {
+    font-size: 1rem;
+  }
+
   .card-image-overlay {
     margin: 220px auto 0 auto;
     width: 80vw;
