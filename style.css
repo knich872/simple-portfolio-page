@@ -185,6 +185,27 @@ a {
     width: 90vw;
     height: 50vh;
   }
+
+  .card-image-overlay {
+    margin: 240px auto 0 auto;
+    width: 35vw;
+    height: 15vh;
+  }
+
+  .tech-stack {
+    width: 40%;
+    margin-top: 4%;
+    padding: 0 2% 0 0;
+  }
+
+  .card-title {
+    padding: 4% 0 0 1%;
+    font-size: 2.5rem;
+  }
+
+  .project-description {
+    font-size: 1.5rem;
+  }
 }
 
 @media (max-width: 800px) {
@@ -193,13 +214,19 @@ a {
     align-content: center;
   }
 
+  .card-image-overlay {
+    margin: 210px auto 0 auto;
+    width: 50vw;
+    height: 15vh;
+  }
+
   .card {
     width: 70vw;
     height: 40vh;
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .profile-pic {
     width: 90%;
     margin-top: 15%;
@@ -219,10 +246,8 @@ a {
   }
   .card-image-overlay {
     margin: 220px auto 0 auto;
-    background-color: white;
-    width: 80%;
-    height: 30%;
-    box-shadow: 1px 1px 8px lightgrey;
+    width: 80vw;
+    height: 15vh;
   }
 
   .footer-container {
