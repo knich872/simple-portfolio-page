@@ -1,153 +1,148 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
   <meta charset="UTF-8">
-  <title>My Landing Page</title>
-  <link rel="icon" type="image/x-icon" href="images/my_profile_photo-modified.png" />
-
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kyle Nichols | Full Stack Web Developer</title>
+  <meta name="description" content="Portfolio of Kyle Nichols, a full stack web developer based in Yokohama: web apps and networking home lab projects.">
+  <link rel="icon" type="image/png" href="images/my_profile_photo-modified.png">
 
-  <!-- Bootstrap Links -->
+  <!-- Bootstrap (navbar + container) -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous" defer></script>
 
-  <!-- Google Fonts -->
+  <!-- Fonts: Poppins for Latin text, Noto Sans JP so Japanese renders consistently on every device -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Poppins&family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <!-- Stylesheet -->
+  <!-- Icons -->
+  <link href="https://use.fontawesome.com/releases/v6.1.2/css/all.css" rel="stylesheet">
+
+  <!-- Site styles -->
   <link href="style.css" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/e41b0deb72.js" crossorigin="anonymous"></script>
 </head>
-<body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand mx-4" href="#">Kyle Nichols</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarText">
-      <ul class="navbar-nav mx-4">
-        <!-- <li class="nav-item mx-4">
-          <a class="nav-link" href="#about">About Me</a>
-        </li> -->
-        <li class="nav-item active mx-4">
-          <a class="nav-link" href="#projects">Projects</a>
-        </li>
-        <!-- <li class="nav-item mx-4">
-          <a class="nav-link" href="#contact">Contact Me</a>
-        </li> -->
-      </ul>
-      <span class="navbar-text">
-      </span>
+<body id="top">
+  <a class="skip-link" href="#main" data-i18n="nav.skip">Skip to content</a>
+
+  <nav class="navbar navbar-expand-lg site-nav sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#top">Kyle Nichols</a>
+
+      <!-- Language switcher: always visible, even when the menu is collapsed -->
+      <div class="lang-switch ms-auto ms-lg-3 me-2 me-lg-0 order-lg-3" role="group" aria-label="Language" data-i18n-aria="lang.group">
+        <button type="button" class="lang-btn" data-lang="ja" aria-pressed="false" aria-label="日本語" title="日本語">
+          <svg viewBox="0 0 30 20" aria-hidden="true" focusable="false"><rect width="30" height="20" fill="#fff"/><circle cx="15" cy="10" r="6" fill="#bc002d"/></svg>
+        </button>
+        <button type="button" class="lang-btn" data-lang="en" aria-pressed="true" aria-label="English (US)" title="English (US)">
+          <svg viewBox="0 0 30 20" aria-hidden="true" focusable="false"><rect width="30" height="20" fill="#fff"/><path d="M0 .769H30M0 3.846H30M0 6.923H30M0 10H30M0 13.077H30M0 16.154H30M0 19.231H30" stroke="#b22234" stroke-width="1.538"/><rect width="12" height="10.77" fill="#3c3b6e"/><path d="M1 1.08H11.1M2 2.15H10.1M1 3.23H11.1M2 4.31H10.1M1 5.38H11.1M2 6.46H10.1M1 7.54H11.1M2 8.62H10.1M1 9.69H11.1" stroke="#fff" stroke-width=".7" stroke-linecap="round" stroke-dasharray="0 2"/></svg>
+        </button>
+      </div>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation" data-i18n-aria="nav.toggle">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse order-lg-2" id="navMenu">
+        <ul class="navbar-nav ms-lg-auto">
+          <li class="nav-item"><a class="nav-link" href="#projects" data-i18n="nav.projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#homelab" data-i18n="nav.lab">Home Lab</a></li>
+        </ul>
+      </div>
     </div>
   </nav>
-  <div>
-    <div class="container my-4">
-      <div class="row">
-        <div id="about" class="col-6">
-          <div class="my-4 py-4">
-            <h1 class="my-4 py-4">Hi, I'm Kyle</h1>
-            <p class="my-4">Full stack web developer looking to make a difference.</p>
-            <p class="my-4">I'm currently based in Yokohama, honing my skills and expanding my knowledge base.</p>
-          </div>
+
+  <main id="main">
+    <!-- Hero -->
+    <header class="hero" id="about">
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <h1 data-i18n="hero.title">Hi, I'm Kyle</h1>
+          <p data-i18n="hero.p1">Full stack web developer looking to make a difference.</p>
+          <p data-i18n="hero.p2">I'm currently based in Yokohama, honing my skills and expanding my knowledge base.</p>
+
+          <ul class="social" aria-label="Contact links" data-i18n-aria="contact.group">
+            <li><a href="https://www.linkedin.com/in/kyle-robert-nichols" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a></li>
+            <li><a href="https://github.com/knich872" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.facebook.com/kyle.nichols.988" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a></li>
+            <li><a href="mailto:kyle.r.nichols@gmail.com" aria-label="Email" data-i18n-aria="contact.email"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a></li>
+          </ul>
         </div>
-        <div class="col-6">
-          <img src="images/Subject.png" alt="Kyle Nichols" class="profile-pic">
+        <img class="hero__photo" src="images/Subject.png" width="758" height="1295" alt="Kyle Nichols" data-i18n-alt="hero.alt">
+      </div>
+    </header>
+
+    <!-- Web projects -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section__title" data-i18n="projects.title">Check out my work</h2>
+        <div class="card-grid">
+          <a class="project-card" href="https://grocer-ease-knich872-b23427145edd.herokuapp.com/" target="_blank" rel="noopener noreferrer">
+            <img src="images/grocerease.png" width="1912" height="925" alt="" loading="lazy">
+            <div class="project-card__body">
+              <h3>GrocerEase</h3>
+              <p data-i18n="projects.grocerease">Real-time shared groceries list</p>
+            </div>
+          </a>
+          <a class="project-card" href="https://gearshare-knich872-bcc37dc3c7bc.herokuapp.com/" target="_blank" rel="noopener noreferrer">
+            <img src="images/gearshare.png" width="1920" height="930" alt="" loading="lazy">
+            <div class="project-card__body">
+              <h3>GearShare</h3>
+              <p data-i18n="projects.gearshare">P2P gear rental</p>
+            </div>
+          </a>
+          <a class="project-card" href="https://storylab-9967be43fa8a.herokuapp.com/" target="_blank" rel="noopener noreferrer">
+            <img src="images/new-storylab.png" width="1888" height="905" alt="" loading="lazy">
+            <div class="project-card__body">
+              <h3>StoryLab</h3>
+              <p data-i18n="projects.storylab">Easily create YouTube scripts</p>
+            </div>
+          </a>
         </div>
       </div>
-    </div>
-    <div class="contact-container">
-      <a href="https://www.linkedin.com/in/kyle-robert-nichols" target="_blank">
-        <i class="fa-brands contact-link fa-linkedin fa-3x"></i>
-      </a>
-      <a href="https://github.com/knich872" target="_blank">
-        <i class="fa-brands contact-link fa-github fa-3x"></i>
-      </a>
-      <a href="https://www.facebook.com/kyle.nichols.988" target="_blank">
-        <i class="fa-brands contact-link fa-facebook fa-3x"></i>
-      </a>
-      <a href="mailto: kyle.r.nichols@gmail.com" target="_blank">
-        <i class="fa-solid contact-link fa-envelope fa-3x"></i>
-      </a>
-    </div>
-    <div class="row email-contact">
-    </div>
-  </div>
-  <div id="projects" class="row py-4 justify-content-center">
-    <h3 class="d-flex justify-content-center py-4">Check out my work</h3>
-    <div class="card-div col-lg-12 d-lg-flex justify-content-center">
-      <div class="row col-lg-3 col-sm-12 card g-0 mx-3">
-        <img src="images/grocerease.png" class="img-fluid" alt="GrocerEase">
-        <div class="col-md-8">
-          <div class="card-img-overlay pt-0 justify-content-between">
-            <!-- <p class="card-text">Looking for an easier way to do your grocery shopping with your spouse?</p> -->
-            <a href="https://grocer-ease-knich872-b23427145edd.herokuapp.com/" class="project-link">
-              <div class="row d-flex">
-                <h5 class="card-title">GrocerEase</h5>
-                <!-- <img src="images/Screenshot no js.png" alt="Tech Stack" class="tech-stack"> -->
-                <!-- <div class="">
-                  <i class="fa-brands fa-css3"></i>
-                </div> -->
-              </div>
-              <div>
-                <p class="project-description">
-                  Real-time shared groceries list
-                </p>
-              </div>
-            </a>
-          </div>
+    </section>
+
+    <!-- Networking home lab -->
+    <section id="homelab" class="section lab">
+      <div class="container">
+        <h2 class="section__title" data-i18n="lab.title">Networking home lab</h2>
+        <p class="lab__intro" data-i18n="lab.intro">Hands-on networking projects I build and test at home.</p>
+
+        <!--
+          Replace each placeholder card with a real project.
+          Copy a whole <article> to add more, and delete the .badge-placeholder span once the text is real.
+          Text lives in script.js (translations) so it can be switched between English and Japanese.
+        -->
+        <div class="card-grid">
+          <article class="lab-card">
+            <span class="badge-placeholder" data-i18n="lab.badge">Placeholder</span>
+            <div class="lab-card__icon"><i class="fa-solid fa-network-wired" aria-hidden="true"></i></div>
+            <h3 data-i18n="lab.p1.title">Home lab project one</h3>
+            <p data-i18n="lab.placeholder">Placeholder text. Describe the topology, the hardware and software you used, and what you learned.</p>
+          </article>
+          <article class="lab-card">
+            <span class="badge-placeholder" data-i18n="lab.badge">Placeholder</span>
+            <div class="lab-card__icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div>
+            <h3 data-i18n="lab.p2.title">Home lab project two</h3>
+            <p data-i18n="lab.placeholder">Placeholder text. Describe the topology, the hardware and software you used, and what you learned.</p>
+          </article>
+          <article class="lab-card">
+            <span class="badge-placeholder" data-i18n="lab.badge">Placeholder</span>
+            <div class="lab-card__icon"><i class="fa-solid fa-server" aria-hidden="true"></i></div>
+            <h3 data-i18n="lab.p3.title">Home lab project three</h3>
+            <p data-i18n="lab.placeholder">Placeholder text. Describe the topology, the hardware and software you used, and what you learned.</p>
+          </article>
         </div>
       </div>
-      <div class="row col-lg-3 col-sm-12 card g-0 mx-3">
-        <img src="images/gearshare.png" class="img-fluid" alt="GearShare">
-        <div class="col-md-8 ">
-          <div class="card-img-overlay pt-0">
-            <!-- <p class="card-text">Want to start a new hobby but don't have the gear? We got you covered.</p> -->
-            <a href="https://gearshare-knich872-bcc37dc3c7bc.herokuapp.com/" target="_blank" class="project-link">
-              <div class="row d-flex flex-wrap">
-                <h5 class="card-title">GearShare</h5>
-                <!-- <img src="images/Screenshot 2023-09-15 140807.png" alt="Tech Stack" class="tech-stack"> -->
-                <!-- <div class="">
-                  <i class="fa-brands fa-css3"></i>
-                  <i class="fa-brands fa-js"></i>
-                </div> -->
-              </div>
-              <div>
-                <p class="project-description">
-                  P2P gear rental
-                </p>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="row col-lg-3 col-sm-12 card g-0 mx-3">
-        <img src="images/new-storylab.png" class="img-fluid" alt="StoryLab">
-        <div class="col-md-8">
-          <div class="card-img-overlay pt-0">
-            <!-- <p class="card-text">Turn simple ideas into entertaining scripts. Grow your Youtube channel with us.</p> -->
-            <a href="https://storylab-9967be43fa8a.herokuapp.com/" target="_blank" class="project-link">
-              <div class="row d-flex flex-wrap">
-                <h5 class="card-title">StoryLab</h5>
-                <!-- <img src="images/Screenshot 2023-09-15 140807.png" alt="Tech Stack" class="tech-stack"> -->
-                <!-- <div class="">
-                  <i class="fa-brands fa-css3"></i>
-                  <i class="fa-brands fa-js"></i>
-                </div> -->
-              </div>
-              <div>
-                <p class="project-description">
-                  Easily create YouTube scripts
-                </p>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year">2026</span> Kyle Nichols</p>
     </div>
-  </div>
-  <div class="footer py-4">
-  </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
