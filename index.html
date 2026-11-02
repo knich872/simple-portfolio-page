@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kyle Nichols | Full Stack Web Developer</title>
-  <meta name="description" content="Portfolio of Kyle Nichols, a full stack web developer based in Yokohama: web apps and networking home lab projects.">
+  <title>Kyle Nichols | Aspiring Network Engineer, CCNA</title>
+  <meta name="description" content="Kyle Nichols is a CCNA-certified networking self-starter in Yokohama, building home lab projects on the way to a network engineer role.">
   <link rel="icon" type="image/png" href="images/my_profile_photo-modified.png">
 
   <!-- Bootstrap (navbar + container) -->
@@ -45,8 +45,8 @@
 
       <div class="collapse navbar-collapse order-lg-2" id="navMenu">
         <ul class="navbar-nav ms-lg-auto">
-          <li class="nav-item"><a class="nav-link" href="#projects" data-i18n="nav.projects">Projects</a></li>
           <li class="nav-item"><a class="nav-link" href="#homelab" data-i18n="nav.lab">Home Lab</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects" data-i18n="nav.projects">Web Projects</a></li>
         </ul>
       </div>
     </div>
@@ -58,8 +58,13 @@
       <div class="container hero__inner">
         <div class="hero__text">
           <h1 data-i18n="hero.title">Hi, I'm Kyle</h1>
-          <p data-i18n="hero.p1">Full stack web developer looking to make a difference.</p>
-          <p data-i18n="hero.p2">I'm currently based in Yokohama, honing my skills and expanding my knowledge base.</p>
+          <p data-i18n="hero.p1">A CCNA-certified networking self-starter, working toward my first role as a network engineer.</p>
+          <p data-i18n="hero.p2">I'm based in Yokohama, where I build and troubleshoot networks in my home lab to turn certification knowledge into hands-on skill.</p>
+
+          <p class="cert-badge">
+            <i class="fa-solid fa-certificate" aria-hidden="true"></i>
+            <span data-i18n="hero.cert">Cisco CCNA certified</span>
+          </p>
 
           <ul class="social" aria-label="Contact links" data-i18n-aria="contact.group">
             <li><a href="https://www.linkedin.com/in/kyle-robert-nichols" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a></li>
@@ -72,10 +77,45 @@
       </div>
     </header>
 
-    <!-- Web projects -->
+    <!-- Networking home lab: the main event, so it comes first -->
+    <section id="homelab" class="section lab">
+      <div class="container">
+        <h2 class="section__title section__title--tight" data-i18n="lab.title">Networking home lab</h2>
+        <p class="section__intro" data-i18n="lab.intro">Networking projects from the last six months, built and tested on my own equipment.</p>
+
+        <!--
+          Replace each placeholder card with a real project from the last six months.
+          Copy a whole <article> to add more, and delete the .badge-placeholder span once the text is real.
+          Text lives in script.js (translations) so it can be switched between English and Japanese.
+        -->
+        <div class="card-grid">
+          <article class="lab-card">
+            <span class="badge-placeholder" data-i18n="lab.badge">Placeholder</span>
+            <div class="lab-card__icon"><i class="fa-solid fa-network-wired" aria-hidden="true"></i></div>
+            <h3 data-i18n="lab.p1.title">Home lab project one</h3>
+            <p data-i18n="lab.placeholder">Placeholder text. Describe the goal, the topology, the devices and protocols you used, and what you learned.</p>
+          </article>
+          <article class="lab-card">
+            <span class="badge-placeholder" data-i18n="lab.badge">Placeholder</span>
+            <div class="lab-card__icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div>
+            <h3 data-i18n="lab.p2.title">Home lab project two</h3>
+            <p data-i18n="lab.placeholder">Placeholder text. Describe the goal, the topology, the devices and protocols you used, and what you learned.</p>
+          </article>
+          <article class="lab-card">
+            <span class="badge-placeholder" data-i18n="lab.badge">Placeholder</span>
+            <div class="lab-card__icon"><i class="fa-solid fa-server" aria-hidden="true"></i></div>
+            <h3 data-i18n="lab.p3.title">Home lab project three</h3>
+            <p data-i18n="lab.placeholder">Placeholder text. Describe the goal, the topology, the devices and protocols you used, and what you learned.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Earlier web projects -->
     <section id="projects" class="section">
       <div class="container">
-        <h2 class="section__title" data-i18n="projects.title">Check out my work</h2>
+        <h2 class="section__title section__title--tight" data-i18n="projects.title">Earlier web projects</h2>
+        <p class="section__intro" data-i18n="projects.intro">Web apps I built three years ago, before I turned my focus to networking.</p>
         <div class="card-grid">
           <a class="project-card" href="https://grocer-ease-knich872-b23427145edd.herokuapp.com/" target="_blank" rel="noopener noreferrer">
             <img src="images/grocerease.png" width="1912" height="925" alt="" loading="lazy">
@@ -98,40 +138,6 @@
               <p data-i18n="projects.storylab">Easily create YouTube scripts</p>
             </div>
           </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Networking home lab -->
-    <section id="homelab" class="section lab">
-      <div class="container">
-        <h2 class="section__title" data-i18n="lab.title">Networking home lab</h2>
-        <p class="lab__intro" data-i18n="lab.intro">Hands-on networking projects I build and test at home.</p>
-
-        <!--
-          Replace each placeholder card with a real project.
-          Copy a whole <article> to add more, and delete the .badge-placeholder span once the text is real.
-          Text lives in script.js (translations) so it can be switched between English and Japanese.
-        -->
-        <div class="card-grid">
-          <article class="lab-card">
-            <span class="badge-placeholder" data-i18n="lab.badge">Placeholder</span>
-            <div class="lab-card__icon"><i class="fa-solid fa-network-wired" aria-hidden="true"></i></div>
-            <h3 data-i18n="lab.p1.title">Home lab project one</h3>
-            <p data-i18n="lab.placeholder">Placeholder text. Describe the topology, the hardware and software you used, and what you learned.</p>
-          </article>
-          <article class="lab-card">
-            <span class="badge-placeholder" data-i18n="lab.badge">Placeholder</span>
-            <div class="lab-card__icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div>
-            <h3 data-i18n="lab.p2.title">Home lab project two</h3>
-            <p data-i18n="lab.placeholder">Placeholder text. Describe the topology, the hardware and software you used, and what you learned.</p>
-          </article>
-          <article class="lab-card">
-            <span class="badge-placeholder" data-i18n="lab.badge">Placeholder</span>
-            <div class="lab-card__icon"><i class="fa-solid fa-server" aria-hidden="true"></i></div>
-            <h3 data-i18n="lab.p3.title">Home lab project three</h3>
-            <p data-i18n="lab.placeholder">Placeholder text. Describe the topology, the hardware and software you used, and what you learned.</p>
-          </article>
         </div>
       </div>
     </section>
