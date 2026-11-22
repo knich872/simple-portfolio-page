@@ -374,13 +374,15 @@ html[lang="ja"] .hero h1 {
 }
 
 /* Two columns on tablets and up, one on phones */
+/* minmax(0, 1fr) lets columns shrink below their text's natural width,
+   so long Japanese phrases wrap instead of widening the page */
 .lab-grid {
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
 }
 
 @media (min-width: 768px) {
   .lab-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -428,6 +430,7 @@ html[lang="ja"] .hero h1 {
 
 .lab-card__body {
   padding: 1.1rem 0.5rem 0.5rem;
+  overflow-wrap: anywhere;
 }
 
 .lab-card .lab-card__head {
