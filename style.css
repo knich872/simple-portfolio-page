@@ -270,6 +270,15 @@ html[lang="ja"] .hero h1 {
   font-weight: 500;
 }
 
+.hero .hero__tagline {
+  max-width: 38rem;
+  margin-bottom: 1.25rem;
+  font-size: clamp(1.3rem, 2.8vw, 1.65rem);
+  font-weight: 600;
+  line-height: 1.35;
+  text-wrap: balance;
+}
+
 .hero .cert-badge {
   margin: 0.5rem 0 0;
   font-size: 0.95rem;
@@ -358,22 +367,155 @@ html[lang="ja"] .hero h1 {
 
 .lab-card {
   position: relative;
-  padding: 1.75rem;
+  padding: 1rem;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: var(--radius);
 }
 
-.lab-card__icon {
+/* Two columns on tablets and up, one on phones */
+.lab-grid {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .lab-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* One large photo with two smaller ones underneath */
+.lab-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.shot {
+  display: block;
+  padding: 0;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.06);
+  border: 0;
+  border-radius: 10px;
+  cursor: zoom-in;
+  line-height: 0;
+}
+
+.shot[hidden] {
+  display: none; /* a photo that doesn't exist leaves no empty tile */
+}
+
+.shot--main {
+  grid-column: 1 / -1;
+}
+
+.shot img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.shot--main img {
+  aspect-ratio: 16 / 9;
+}
+
+.shot:hover img {
+  transform: scale(1.03);
+}
+
+.lab-card__body {
+  padding: 1.1rem 0.5rem 0.5rem;
+}
+
+.lab-card .lab-card__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.lab-card .lab-card__head h3 {
+  margin: 0;
+}
+
+/* Photo viewer */
+.lightbox {
+  width: min(94vw, 1000px);
+  max-width: none;
+  padding: 3rem 1rem 1rem;
+  background: #0b1a1d;
+  border: 0;
+  border-radius: var(--radius);
+  color: #fff;
+}
+
+.lightbox::backdrop {
+  background: rgba(4, 14, 16, 0.82);
+}
+
+.lightbox__figure {
+  margin: 0;
+  text-align: center;
+}
+
+.lightbox__figure img {
+  display: block;
+  max-width: 100%;
+  max-height: 72vh;
+  margin: 0 auto;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.lightbox__figure figcaption {
+  margin-top: 0.75rem;
+  color: var(--night-text);
+  font-size: 0.9rem;
+}
+
+.lightbox__close,
+.lightbox__nav {
+  position: absolute;
   display: grid;
   place-items: center;
-  width: 3rem;
-  height: 3rem;
-  margin-bottom: 1.1rem;
-  background: rgba(143, 211, 220, 0.14);
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  background: rgba(255, 255, 255, 0.12);
+  border: 0;
   border-radius: 50%;
-  color: var(--lab-accent);
-  font-size: 1.2rem;
+  color: #fff;
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.lightbox__close:hover,
+.lightbox__nav:hover {
+  background: rgba(255, 255, 255, 0.24);
+}
+
+.lightbox__close {
+  top: 0.6rem;
+  right: 0.6rem;
+}
+
+.lightbox__nav {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.lightbox__prev { left: 0.6rem; }
+.lightbox__next { right: 0.6rem; }
+
+.lightbox :focus-visible {
+  outline: 3px solid var(--lab-accent);
+  outline-offset: 2px;
 }
 
 .lab-card h3 {
@@ -389,9 +531,7 @@ html[lang="ja"] .hero h1 {
 
 /* Delete this element from a card once its text is real */
 .badge-placeholder {
-  position: absolute;
-  top: 1.1rem;
-  right: 1.1rem;
+  flex: none;
   padding: 0.1rem 0.7rem;
   border: 1px dashed #e0b34a;
   border-radius: 999px;
