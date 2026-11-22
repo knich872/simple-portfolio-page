@@ -34,13 +34,13 @@
       'lab.intro': 'Networking projects from the last six months, built and tested on my own equipment.',
       'lab.badge': 'Draft',
       'lab.baby.title': 'Baby monitor',
-      'lab.baby.desc': 'Placeholder text. Describe what you built, the devices and protocols you used, and what you learned.',
+      'lab.baby.desc': "I didn't buy a baby monitor. I built one.",
       'lab.nextcloud.title': 'Nextcloud',
-      'lab.nextcloud.desc': 'Self-hosted file storage and sync.',
+      'lab.nextcloud.desc': 'Nextcloud for self-hosted cloud storage and Tailscale for secure remote access.',
       'lab.pihole.title': 'Pi-hole',
-      'lab.pihole.desc': 'Network-wide DNS filtering that blocks ads and trackers for every device.',
+      'lab.pihole.desc': 'I stood up Pi-hole on a Raspberry Pi 5 and made it the authoritative DNS resolver for my LAN.',
       'lab.pialert.title': 'Pi-Alert',
-      'lab.pialert.desc': 'Network scanner that alerts me when a new device joins.',
+      'lab.pialert.desc': "Pi-Alert scans, my script cross-checks, and I get an email only when something's actually worth looking at.",
       'lab.photoAlt': '{name}, photo {n}',
       'lightbox.label': 'Photo viewer',
       'lightbox.close': 'Close photo viewer',
@@ -71,13 +71,13 @@
       'lab.intro': '過去6か月間に、自前の機器で構築・検証したネットワークのプロジェクトです。',
       'lab.badge': '下書き',
       'lab.baby.title': 'ベビーモニター',
-      'lab.baby.desc': '仮の文章です。作ったもの、使用した機器やプロトコル、学んだことを書いてください。',
+      'lab.baby.desc': 'ベビーモニターは買わずに、自作しました。',
       'lab.nextcloud.title': 'Nextcloud',
-      'lab.nextcloud.desc': 'セルフホスト型のファイル保存・同期サービス。',
+      'lab.nextcloud.desc': 'セルフホスト型クラウドストレージのNextcloudと、安全なリモートアクセスのためのTailscaleを使っています。',
       'lab.pihole.title': 'Pi-hole',
-      'lab.pihole.desc': 'ネットワーク全体のDNSフィルタリングで、すべての端末の広告やトラッカーをブロック。',
+      'lab.pihole.desc': 'Raspberry Pi 5にPi-holeを構築し、自宅LANのDNSリゾルバとして運用しています。',
       'lab.pialert.title': 'Pi-Alert',
-      'lab.pialert.desc': 'ネットワークをスキャンし、新しい端末が接続すると通知するツール。',
+      'lab.pialert.desc': 'Pi-Alertがスキャンし、自作スクリプトが照合して、本当に確認が必要なときだけメールが届きます。',
       'lab.photoAlt': '{name}の写真 {n}',
       'lightbox.label': '写真ビューア',
       'lightbox.close': '写真を閉じる',
@@ -85,6 +85,13 @@
       'lightbox.next': '次の写真'
     }
   };
+
+  // The English wording is read straight from index.html, so text you edit there always
+  // shows up. This file only needs to hold the Japanese text (plus English for the page
+  // title, description and aria-labels, which aren't visible text on the page).
+  document.querySelectorAll('[data-i18n]').forEach(function (el) {
+    translations.en[el.getAttribute('data-i18n')] = el.textContent;
+  });
 
   function detectLanguage() {
     var fromUrl = new URLSearchParams(window.location.search).get('lang');
