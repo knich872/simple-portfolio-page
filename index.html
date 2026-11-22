@@ -58,8 +58,8 @@
       <div class="container hero__inner">
         <div class="hero__text">
           <h1 data-i18n="hero.title">Hi, I'm Kyle</h1>
-          <p data-i18n="hero.p1">A CCNA-certified networking self-starter, working toward my first role as a network engineer.</p>
-          <p data-i18n="hero.p2">I'm based in Yokohama, where I build and troubleshoot networks in my home lab to turn certification knowledge into hands-on skill.</p>
+          <p class="hero__tagline" data-i18n="hero.p1">Aspiring network engineer. I turn cables, configs and curiosity into working networks.</p>
+          <p data-i18n="hero.p2">CCNA-certified and based in Yokohama, I build and troubleshoot networks in my home lab to turn certification knowledge into hands-on skill.</p>
 
           <p class="cert-badge">
             <i class="fa-solid fa-certificate" aria-hidden="true"></i>
@@ -84,28 +84,68 @@
         <p class="section__intro" data-i18n="lab.intro">Networking projects from the last six months, built and tested on my own equipment.</p>
 
         <!--
-          Replace each placeholder card with a real project from the last six months.
-          Copy a whole <article> to add more, and delete the .badge-placeholder span once the text is real.
-          Text lives in script.js (translations) so it can be switched between English and Japanese.
+          Each project shows three photos named <project>_1, _2 and _3 from the images/ folder
+          (.jpg, .jpeg, .png and .webp all work). Click any photo to enlarge it.
+          The "Draft" badge marks text that still needs your own write-up; delete the
+          <span class="badge-placeholder"> once a card is final.
+          To add a project, copy a whole <article> and add its text to script.js.
         -->
-        <div class="card-grid">
+        <div class="card-grid lab-grid">
           <article class="lab-card">
-            <span class="badge-placeholder" data-i18n="lab.badge">Placeholder</span>
-            <div class="lab-card__icon"><i class="fa-solid fa-network-wired" aria-hidden="true"></i></div>
-            <h3 data-i18n="lab.p1.title">Home lab project one</h3>
-            <p data-i18n="lab.placeholder">Placeholder text. Describe the goal, the topology, the devices and protocols you used, and what you learned.</p>
+            <div class="lab-gallery">
+              <button type="button" class="shot shot--main"><img src="images/baby_monitor_1.jpg" data-photo="images/baby_monitor_1" loading="lazy" alt=""></button>
+              <button type="button" class="shot"><img src="images/baby_monitor_2.jpg" data-photo="images/baby_monitor_2" loading="lazy" alt=""></button>
+              <button type="button" class="shot"><img src="images/baby_monitor_3.jpg" data-photo="images/baby_monitor_3" loading="lazy" alt=""></button>
+            </div>
+            <div class="lab-card__body">
+              <div class="lab-card__head">
+                <h3 data-i18n="lab.baby.title">Baby monitor</h3>
+                <span class="badge-placeholder" data-i18n="lab.badge">Draft</span>
+              </div>
+              <p data-i18n="lab.baby.desc">Placeholder text. Describe what you built, the devices and protocols you used, and what you learned.</p>
+            </div>
           </article>
           <article class="lab-card">
-            <span class="badge-placeholder" data-i18n="lab.badge">Placeholder</span>
-            <div class="lab-card__icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div>
-            <h3 data-i18n="lab.p2.title">Home lab project two</h3>
-            <p data-i18n="lab.placeholder">Placeholder text. Describe the goal, the topology, the devices and protocols you used, and what you learned.</p>
+            <div class="lab-gallery">
+              <button type="button" class="shot shot--main"><img src="images/nextcloud_1.jpg" data-photo="images/nextcloud_1" loading="lazy" alt=""></button>
+              <button type="button" class="shot"><img src="images/nextcloud_2.jpg" data-photo="images/nextcloud_2" loading="lazy" alt=""></button>
+              <button type="button" class="shot"><img src="images/nextcloud_3.jpg" data-photo="images/nextcloud_3" loading="lazy" alt=""></button>
+            </div>
+            <div class="lab-card__body">
+              <div class="lab-card__head">
+                <h3 data-i18n="lab.nextcloud.title">Nextcloud</h3>
+                <span class="badge-placeholder" data-i18n="lab.badge">Draft</span>
+              </div>
+              <p data-i18n="lab.nextcloud.desc">Self-hosted file storage and sync.</p>
+            </div>
           </article>
           <article class="lab-card">
-            <span class="badge-placeholder" data-i18n="lab.badge">Placeholder</span>
-            <div class="lab-card__icon"><i class="fa-solid fa-server" aria-hidden="true"></i></div>
-            <h3 data-i18n="lab.p3.title">Home lab project three</h3>
-            <p data-i18n="lab.placeholder">Placeholder text. Describe the goal, the topology, the devices and protocols you used, and what you learned.</p>
+            <div class="lab-gallery">
+              <button type="button" class="shot shot--main"><img src="images/pi_hole_1.jpg" data-photo="images/pi_hole_1" loading="lazy" alt=""></button>
+              <button type="button" class="shot"><img src="images/pi_hole_2.jpg" data-photo="images/pi_hole_2" loading="lazy" alt=""></button>
+              <button type="button" class="shot"><img src="images/pi_hole_3.jpg" data-photo="images/pi_hole_3" loading="lazy" alt=""></button>
+            </div>
+            <div class="lab-card__body">
+              <div class="lab-card__head">
+                <h3 data-i18n="lab.pihole.title">Pi-hole</h3>
+                <span class="badge-placeholder" data-i18n="lab.badge">Draft</span>
+              </div>
+              <p data-i18n="lab.pihole.desc">Network-wide DNS filtering that blocks ads and trackers for every device.</p>
+            </div>
+          </article>
+          <article class="lab-card">
+            <div class="lab-gallery">
+              <button type="button" class="shot shot--main"><img src="images/pi_alert_1.jpg" data-photo="images/pi_alert_1" loading="lazy" alt=""></button>
+              <button type="button" class="shot"><img src="images/pi_alert_2.jpg" data-photo="images/pi_alert_2" loading="lazy" alt=""></button>
+              <button type="button" class="shot"><img src="images/pi_alert_3.jpg" data-photo="images/pi_alert_3" loading="lazy" alt=""></button>
+            </div>
+            <div class="lab-card__body">
+              <div class="lab-card__head">
+                <h3 data-i18n="lab.pialert.title">Pi-Alert</h3>
+                <span class="badge-placeholder" data-i18n="lab.badge">Draft</span>
+              </div>
+              <p data-i18n="lab.pialert.desc">Network scanner that alerts me when a new device joins.</p>
+            </div>
           </article>
         </div>
       </div>
@@ -148,6 +188,17 @@
       <p>&copy; <span id="year">2026</span> Kyle Nichols</p>
     </div>
   </footer>
+
+  <!-- Photo viewer for the home lab galleries -->
+  <dialog class="lightbox" id="lightbox" aria-label="Photo viewer" data-i18n-aria="lightbox.label">
+    <button type="button" class="lightbox__close" aria-label="Close photo viewer" data-i18n-aria="lightbox.close">&times;</button>
+    <button type="button" class="lightbox__nav lightbox__prev" aria-label="Previous photo" data-i18n-aria="lightbox.prev">&#8249;</button>
+    <figure class="lightbox__figure">
+      <img id="lightbox-img" alt="">
+      <figcaption id="lightbox-cap"></figcaption>
+    </figure>
+    <button type="button" class="lightbox__nav lightbox__next" aria-label="Next photo" data-i18n-aria="lightbox.next">&#8250;</button>
+  </dialog>
 
   <script src="script.js"></script>
 </body>
